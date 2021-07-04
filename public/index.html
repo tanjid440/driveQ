@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div id="particles-js"></div>
+  <div id="root">
+
+    <div class="header">
+      <div>
+        <h1>DriveQ</h1>
+        <p>DRIVE SAFELY</p>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="#ridecompletion">Ride Completion Rate</a></li>
+          <li><a href="#speedLimiter">Speed Limiter</a></li>
+          <li><a href="#driverReward">Driver Reward</a></li>
+          <li><a href="#driverReg">Driver Registration</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="handlers">
+
+        <div id="ridecompletion" class="section">
+          <div class="info">
+            <p>
+              DriveQ is a system intended for ride sharing
+              companies to improve their service by improving
+              driver quality with the help of notification system.
+            </p>
+          </div>
+          <h2>Ride Completion Rate Demo</h2>
+          <p>Driver ID</p>
+          <input type="text" id='driver-id' placeholder="bond_007">
+          <button onclick="checkCompletion()">SUBMIT DATA</button>
+        </div>
+
+        <div id="speedLimiter" class="section">
+          <div class="info">
+            <p>
+              Having Speed Limiter functionality integrated into drivers app we can easily notify a driver about over
+              speeding to avoid bad rider experience and give them a level of warning.
+            </p>
+          </div>
+          <h2>Speed Limiter Demo</h2>
+          <p>Preferred Speed Limit</p>
+          <input type="range" name="prefered_speed" id="prefered_speed" max="100" min="30">
+          <span id="pref_spd">0</span>
+          <p>Current Speed Update</p>
+          <input type="range" name="current_speed" id="current_speed" max="150" min="30">
+          <span id="cur_spd">0</span>
+          <button onclick="speedCheck()">SUBMIT DATA</button>
+        </div>
+
+        <div id="driverReward" class="section">
+          <div class="info">
+            <p>
+              Driver Reward System will help drivers earn some virtual points based on their driving quality. These points can be redeemed to cash or discounts on something.
+            </p>
+          </div>
+          <h2>Driver Reward System Demo</h2>
+          <button onclick="checkReward()">CHECK REWARD POINTS</button>
+        </div>
+
+        <div id="driverReg" class="section">
+          <div class="info">
+            <p>Once a driver is banned from the service he cannot register as a new driver using his old credentials.</p>
+          </div>
+          <h2>Driver Registration Demo</h2>
+          <input type="text" name="driver_name" id="driver_name" placeholder="Full Name">
+          <input type="text" name="driver_nid" id="driver_nid" placeholder="National ID No.">
+          <input type="text" name="driver_phone" id="driver_phone" placeholder="Phone No.">
+          <input type="text" name="driver_vehicle_id" id="driver_vehicle_id" placeholder="Vehicle ID">
+          
+          <button onclick="register()">REGISTER NEW DRIVER</button>
+        </div>
+
+      </div>
+
+      <div class="phone-frame">
+        <div class="camera"></div>
+        <div class="battery-state">100%</div>
+        <div class="clock">12:00</div>
+        <div class="notification">
+          <h4 id='d_name'>DriveQ</h4>
+          <p id='message'>Thanks for using our service.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <Script src="js/main.js"></Script>
+</body>
+
+</html>

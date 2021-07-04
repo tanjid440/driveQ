@@ -1,0 +1,33 @@
+POST http://localhost:3030/compRate
+Content-Type: application/json
+
+{"Driver_id":"RIDERID_13"}
+###
+POST http://localhost:3030/checkWarning
+Content-Type: application/json
+
+{   
+    "comfort_speed":50,
+    "rider_speed":150,
+    "Driver_id":"RIDERID_13"
+}
+###
+POST http://localhost:3030/checkReward
+Content-Type: application/json
+
+{"Driver_id":"RIDERID_13"}
+###
+POST http://localhost:3030/checkDriver
+Content-Type: application/json
+
+{"Driver_id":"RIDERID_13"}
+###
+POST http://localhost:3030/userReg
+Content-Type: application/json
+
+{
+    "name": "Sakibur Rahman",
+    "phone": "01717414854",
+    "vehicle_id": "DHAKA-LA-11-0202",
+    "nid":"897498473498719"
+}
